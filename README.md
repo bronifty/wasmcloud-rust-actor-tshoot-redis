@@ -1,3 +1,15 @@
+# tshooting redis capability on localhost
+
+```bash
+  wash down --all
+	rm -rf /tmp/wash-jetstream-4222
+	wash build
+	wash up -d --nats-websocket-port 4001
+	wash app deploy wadm.yaml
+	ps aux | grep nats
+	curl localhost:8080
+```
+
 # hello Actor
 
 This actor makes use of a single capability, `wasmcloud:httpserver`, in order to receive HTTP requests and respond with the classic "Hello, World!".
